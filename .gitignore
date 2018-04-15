@@ -1,3 +1,2 @@
-/node_modules/bcrypt
-/node_Modules/bcrypt-pbkdf
+/node_modules
 .DS_Store
