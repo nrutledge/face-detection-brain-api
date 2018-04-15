@@ -24,7 +24,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', (req, res) => { res.send('successfully loaded homepage') });
+app.get('/', (req, res) => { res.send('Server running successfully') });
 
 // Examples of dependency injection for db and bcrypt
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt) });
