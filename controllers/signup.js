@@ -22,6 +22,7 @@ const handleSignup = (req, res, db, bcrypt) => {
 			}
 		)
 	});
+	console.log('Test');
 };
 
 module.exports = {
