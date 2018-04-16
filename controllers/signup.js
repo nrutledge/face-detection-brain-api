@@ -5,6 +5,8 @@ const handleSignup = (req, res, db, bcrypt) => {
 	}
 	const saltRounds = 10;
 
+	console.log('Test of logging')
+
 	bcrypt.genSalt(saltRounds, function(err, salt) {
 	    bcrypt.hash(password, salt, function(err, hash) {
 			db('users')
@@ -16,7 +18,6 @@ const handleSignup = (req, res, db, bcrypt) => {
 				})
 				.then(user => res.json(user[0]))
 				.catch(err => {
-					console.log('Test of logging')
 					res.status(400).json('Unable to register')
 				});		
 			}
