@@ -15,7 +15,10 @@ const handleSignup = (req, res, db, bcrypt) => {
 					hash: hash
 				})
 				.then(user => res.json(user[0]))
-				.catch(err => res.status(400).json('Unable to register'));		
+				.catch(err => {
+					console.log(err);
+					res.status(400).json('Unable to register')
+				});		
 			}
 		)
 	});
