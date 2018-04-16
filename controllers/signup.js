@@ -5,8 +5,6 @@ const handleSignup = (req, res, db, bcrypt) => {
 	}
 	const saltRounds = 10;
 
-	console.log('Test of logging')
-
 	bcrypt.genSalt(saltRounds, function(err, salt) {
 	    bcrypt.hash(password, salt, function(err, hash) {
 			db('users')
