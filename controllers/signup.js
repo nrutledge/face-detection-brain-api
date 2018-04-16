@@ -16,13 +16,11 @@ const handleSignup = (req, res, db, bcrypt) => {
 				})
 				.then(user => res.json(user[0]))
 				.catch(err => {
-					console.log(err);
-					res.status(400).json('Unable to register')
+					res.status(400).json(err)
 				});		
 			}
 		)
 	});
-	console.log('Test');
 };
 
 module.exports = {
