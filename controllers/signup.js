@@ -16,7 +16,8 @@ const handleSignup = (req, res, db, bcrypt) => {
 				})
 				.then(user => res.json(user[0]))
 				.catch(err => {
-					res.status(400).json(err)
+					console.log('Test of logging')
+					res.status(400).json('Unable to register')
 				});		
 			}
 		)
